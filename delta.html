@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover_Understanding</title>
+    <style>
+        *{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+html,body{
+   height: 100%;
+   width: 100%;
+}
+.container{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hoverbox{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(181, 219, 219);
+    padding: 1vw;
+}
+.nexus{
+    display: flex;
+    flex-direction: column; 
+       align-items: center;
+    justify-content: center;
+    background-color: #11313E;
+    gap: 2vw;
+}
+.nexus>h1{
+    color: white;
+    font-family: gulzar;
+    text-align: center;
+    line-height: 1;
+}
+
+.log{
+    height: 60px;
+    width: 160px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+
+}
+.log>h3{
+    color: black;
+    font-weight: 900;
+    z-index: 999;
+    font-family: manrope;
+    font-size: 1.3vw;
+    margin-left: -35px;
+    height: inherit;
+    width: inherit;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gcircle{
+    position: absolute;
+    height: 10px ;
+    width: 10px;
+    background-color: greenyellow;
+    top: 43%;
+    right: 15%;
+    transform: translate(-50% ,-50%);
+    border-radius: 50%;
+    transition: transform .4s ease-out ;
+    transform: scale(30);
+}
+.log:hover .gcircle{
+    transform: scale(4.5);
+    cursor: pointer;
+}
+
+.wcircle{
+    z-index: 99;
+    position: absolute;
+    height: 40px ;
+    width: 40px;
+    background-color: white;
+    top: 50%;
+    right: -5%;
+    opacity: 1;
+    transform: translate(-50% ,-50%);
+    border-radius: 100%;
+    transition: height .9s ease-out ,width .9s ease-out, right .9s ease-out, opacity .45s ease ;
+    /* transform: scale(2); */
+}
+.log:hover  .wcircle{
+    height: 0px;
+    width: 0px;
+    top: 50%;
+    right: 17%;
+    opacity: 0;
+    /* transform: scale(.4); */
+    cursor: pointer;
+}
+.arrow{
+    position: absolute;
+    transform: translate(-50% ,-50%);
+    width: .7vw;
+    height: 1.2vw;
+    z-index: 99999;
+    margin-left: -25px;
+}
+.arrow-out{
+    top: 38%;
+    right: 15%;
+    transition: margin-right .4s ease, opacity .6s ease ;
+}
+.arrow-in{
+    top: 38%;
+    right: 30%;
+    opacity: 0;
+    transition: opacity 1.3s ease , margin-right .9s ease ;
+}
+.log:hover .arrow-out{
+    opacity: 0;
+    margin-right: -10px;
+}
+.log:hover .arrow-in{
+    opacity: 1;
+    margin-right: -30px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nexus hoverbox">
+            <h1>Nexus.hexagon.com <br> Hover</h1>
+
+                <a  class="log" href="https://nexus.hexagon.com/">
+                    <h3>Log in</h3>
+                    <div class="gcircle">
+                    </div>
+                    <div class="wcircle"></div>
+                    <svg class="arrow-out arrow" viewBox="0 0 13 20" xmlns="http://www.w3.org/2000/svg" class="btn__svg" style="transform: translate(0px, 0px); "><circle cx="9.75" cy="10" r="3.25"></circle><circle cx="3.25" cy="3.5" r="3.25"></circle><circle cx="3.25" cy="16.5" r="3.25"></circle></svg>
+                    <svg class="arrow-in arrow" viewBox="0 0 13 20" xmlns="http://www.w3.org/2000/svg" class="btn__svg" style="transform: translate(0px, 0px); "><circle cx="9.75" cy="10" r="3.25"></circle><circle cx="3.25" cy="3.5" r="3.25"></circle><circle cx="3.25" cy="16.5" r="3.25"></circle></svg>
+                </a>
+
+
+        </div>
+    </div>
+    
+</body>
+</html>

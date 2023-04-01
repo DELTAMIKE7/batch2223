@@ -1,0 +1,500 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+html,body{
+   height: 100%;
+   width: 100%;
+}
+.container{
+    padding-top: 5vh;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    justify-content: start;
+}
+.hoverbox{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    padding: 1vw;
+}
+.hover1{
+    font-family: Gulzar;
+    margin-top: 5px;
+    display: inline-block;
+    width: fit-content;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    color: black;
+}
+.hover1>h2{
+    display: inline-block;
+    font-size: 2vw;
+    height: fit-content;
+    /* background-color: rebeccapurple; */
+    width: min-content;
+    height: 2.5vw;
+}
+.dline{
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    background-color: black;
+    transition: width  1s ease;
+    /* background: linear-gradient(#e66465, #9198e5); */
+}
+.hover1:hover .dline{
+    width: 0%;
+    left: 0%;
+}
+/* .dline{
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(100%,0%);
+    background-color: black;
+    transition: transform .7s ease;
+}
+.hover1:hover .dline{
+    transform: translate(0%,0%);
+} */
+/* @keyframes okay {
+    0%{
+        transform: translate(90%,0%);
+    }
+    100%{
+        transform: translate(-50%,0%);
+    }
+    
+} */
+
+
+
+/* -------------Rocket air HOver Anchor Tag--- */
+.rhover{
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+}
+.rockethover{
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.rhalf{
+    position: absolute;
+    width: 100%;
+    height: calc(100% / 2);
+    background-color: black;
+}
+.rlineup{
+    height: 25px;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.rlinedown{
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.rhover:hover .rlineup , .rhover:hover .rlinedown{
+    transition: height .5s ease;
+    height: 0%;
+    cursor: pointer;
+}
+.rocketheading{
+    z-index: 99999;
+    color: #fff;
+    font-size: 2vw;
+    font-family: gilroy;
+    margin-left: 10px;
+    transition: color .3s ease , margin-left .5s ease ;
+}
+
+.rhover:hover .rocketheading{
+    color: black;
+    margin-left: 50px;
+}
+
+.nexus{
+    display: flex;
+    flex-direction: column; 
+       align-items: center;
+    justify-content: center;
+    background-color: #11313E;
+    gap: 2vw;
+}
+.nexus>h1{
+    color: white;
+    font-family: gulzar;
+    text-align: center;
+    line-height: 1;
+}
+
+.log{
+    height: 60px;
+    width: 160px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+
+}
+.log>h3{
+    color: black;
+    font-weight: 900;
+    z-index: 999;
+    font-family: manrope;
+    font-size: 1.3vw;
+    margin-left: -35px;
+    height: inherit;
+    width: inherit;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gcircle{
+    position: absolute;
+    height: 10px ;
+    width: 10px;
+    background-color: greenyellow;
+    top: 43%;
+    right: 15%;
+    transform: translate(-50% ,-50%);
+    border-radius: 50%;
+    transition: transform .4s ease-out ;
+    transform: scale(30);
+}
+.log:hover .gcircle{
+    transform: scale(4.5);
+    cursor: pointer;
+}
+
+.wcircle{
+    z-index: 99;
+    position: absolute;
+    height: 40px ;
+    width: 40px;
+    background-color: white;
+    top: 50%;
+    right: -5%;
+    opacity: 1;
+    transform: translate(-50% ,-50%);
+    border-radius: 100%;
+    transition: height .9s ease-out ,width .9s ease-out, right .9s ease-out, opacity .45s ease ;
+    /* transform: scale(2); */
+}
+.log:hover  .wcircle{
+    height: 0px;
+    width: 0px;
+    top: 50%;
+    right: 17%;
+    opacity: 0;
+    /* transform: scale(.4); */
+    cursor: pointer;
+}
+.arrow{
+    position: absolute;
+    transform: translate(-50% ,-50%);
+    width: .7vw;
+    height: 1.2vw;
+    z-index: 99999;
+    margin-left: -25px;
+}
+.arrow-out{
+    top: 38%;
+    right: 15%;
+    transition: margin-right .4s ease, opacity .6s ease ;
+}
+.arrow-in{
+    top: 38%;
+    right: 30%;
+    opacity: 0;
+    transition: opacity 1.3s ease , margin-right .9s ease ;
+}
+.log:hover .arrow-out{
+    opacity: 0;
+    margin-right: -10px;
+}
+.log:hover .arrow-in{
+    opacity: 1;
+    margin-right: -30px;
+}
+
+.codeacd{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(115, 221, 203);
+}
+
+.codebox{
+    width: 85%;
+    height: 85%;
+    /* background-color: rgb(171, 118, 118); */
+}
+.codebox>a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #252525;
+    font-family: manrope;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    border: 2px solid black;
+    transition: transform .4s ease, box-shadow .3s ease;
+}
+.codebox>a:hover{
+    transform: translate(5px , -5px);
+    box-shadow: -6px 7px rgb(133, 31, 31);
+}
+/* .codebox>a:hover{
+} */
+.codebox-text{
+    display: flex;
+    flex-direction: column;
+    padding: 3vw;
+}
+
+.mimg{
+    height: 50vh;
+    width: 25vw;
+    background-color: black;
+    
+}
+.hara{
+    top: 0;
+    transform: translate(-100% ,-50%);
+}
+
+a.hover .hara{
+    transform: translate(-50%, -50%);
+}
+
+.himg{
+    transition: opacity .5s ease;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+}
+.mimg:hover .himg{
+    opacity: 0;
+}
+
+
+
+.page1{
+    background-color: rgb(176, 195, 194);
+}
+.page2{
+    background-color: rgb(86, 101, 96);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page3{
+    background-color: rgb(180, 161, 161);
+}
+.page4{
+    background-color: rgb(118, 215, 181);
+}
+.ok{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+}
+
+.golu{
+    height: 400px;
+    width: 450px;
+    background-color: blue;
+    /* border-radius: 50%; */
+    flex-shrink: 0;
+}
+
+.chotu{
+    height: calc(100% /2);
+    width: calc(100% /3 );
+    background-color: red;
+}
+
+
+.hello{
+    font-size: 10vw;
+    font-weight: 900;
+    font-family: gilroy;
+    /* background-color: #fff; */
+    position: relative;
+}
+
+.hello::before{
+    content:"";
+    width: 70px;
+    height: 70px;
+    background-color: blue;
+    position: absolute;
+    top: 2%;
+    left: -7%;
+    border-radius: 50%;
+}
+.hello::after{
+    content:"";
+    width: 70px;
+    height: 70px;
+    background-color: red;
+    position: absolute;
+    border-radius: 50%;
+    bottom: -2%;
+    right: -9%;
+
+}
+.page5{
+    background-color: aqua;
+}
+
+.boxo{
+    height: 200px;
+    width: 200px;
+}
+.alpha{
+    background-color: #b530e6;
+}
+.bravo{
+    background-color: rgb(19, 10, 10);
+}
+
+
+
+.page9 {
+    background-color: rgb(179, 179, 219);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    align-items:  center;
+    justify-content: center;
+}
+.same{
+    height: 50%;
+    width: 100%;
+}
+.top{
+    /* background-color: rgb(183, 129, 129); */
+    background-color: rgb(60, 65, 74);
+}
+
+
+.posi{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+}
+.dflex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dproject{
+    width: 600px;
+    height: 100px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.dproject>p{
+    z-index: 5;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: Gilroy;
+    color: #fff;
+    transition: color .4s ease-out;
+}
+.whitebg{
+    z-index: 3;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(230, 229, 237);
+    border-radius: 50%;
+    transition: transform .5s ease-in-out , opacity .2s ease-out;
+    opacity: 0;
+}
+
+
+.bottom{
+    background-color: rgb(60, 65, 74);
+    display: flex;
+    gap: 40px;
+    font-family: gilroy;
+}
+
+.socialbtn{
+    width: 350px;
+    height: 100px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #fff;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: border-top .5s ease-out;
+}
+.socialname{
+    margin-left: 5px;
+    z-index: 5;
+    transition: margin-left .3s ease-out;
+
+}
+.socialicon{
+    height: 50px;
+    width: 50px;
+    background-color: #fff; 
+    border-radius: 50%;  
+    z-index: 5;
+    margin-right: 5px;
+    transition: margin-right .3s ease-out;
+}
+.socialicon>i{
+    font-size: 30px; 
+    color: black; 
+}
+.socialbg{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(107, 148, 45);
+    z-index: 3;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    transition: top .4s ease-in-out;
+}
